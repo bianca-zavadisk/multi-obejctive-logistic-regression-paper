@@ -1,0 +1,20 @@
+.dr-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dr-title {
+    color: var(--wine);
+
+    font-weight: 900;
+    font-size: 4rem;
+
+    margin-bottom: 2rem;
+
+    line-height: 4rem;
+    text-align: center;
+}

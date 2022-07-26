@@ -1,0 +1,46 @@
+.container--page {
+    display: flex;
+    align-items: center;
+
+    margin: 3rem;
+}
+
+.page-article {
+    width: 70%;
+
+    margin-right: 4rem;
+}
+
+.page-title {
+    color: var(--blue);
+
+    font-weight: 900;
+    font-size: 4rem;
+
+    margin-bottom: 2rem;
+}
+
+.page-text {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.intro-image {
+    width: 60%;
+    margin-top: 1.5rem;
+}
+
+.conclusion-box {
+    width: 75%;
+    text-align: center;
+
+    padding: 1rem;
+
+    background-color: var(--blue);
+    border-radius: 1rem;
+
+    color: var(--white);
+    font-weight: 700;
+
+    margin-top: 1.75rem;
+}

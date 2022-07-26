@@ -1,0 +1,15 @@
+.figure-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.figure-3-caption {
+    width: 45%;
+
+    text-align: justify;
+}
+
+.figure-3-text {
+    margin-bottom: 1rem;
+}
