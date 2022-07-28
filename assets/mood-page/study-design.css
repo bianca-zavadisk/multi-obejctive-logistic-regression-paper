@@ -1,0 +1,42 @@
+.dataset-image {
+    margin-top: .9rem;
+}
+
+.dataset-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-right: 4rem;
+}
+
+.study-design-content {
+    display: flex;
+    align-items: center;
+}
+
+.table--mod {
+    margin-bottom: 2rem;
+    width: 90%;
+
+    border: 4px solid var(--blue);
+}
+
+.table--titles {
+    color: var(--blue);
+    font-weight: 700;
+
+    border: 4px solid var(--blue);
+}
+
+.italic--table-mod {
+    font-style: italic;
+}
+
+.extra-info {
+    margin-left: 2rem;
+}
+
+.extra-item {
+    list-style-image: url(../../img/arrow-right.svg);
+}
