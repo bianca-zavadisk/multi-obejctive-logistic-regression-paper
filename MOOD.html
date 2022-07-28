@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Multi-objective Logistic Regression Reasearch</title>
+
+  <!-- Page icon -->
+  <link rel="icon" href="./assets/img/apple-icon-180x180.png">
+
+  <!-- Font import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap import -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/nav.css">
+  <link rel="stylesheet" href="./assets/css/discussion-and-results/figures.css">
+  <link rel="stylesheet" href="./assets/css/mood-page/mood.css">
+  <link rel="stylesheet" href="./assets/css/mood-page/machine-learning.css">
+  <link rel="stylesheet" href="./assets/css/mood-page/logistic-regression-and-mop.css">
+  <link rel="stylesheet" href="./assets/css/mood-page/study-design.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg  nav--mod">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/img/logo-pucpr-branca.png" alt="#" class="nav-image">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod" href="./intro.html">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod nav-link--mod-active" aria-current="page" href="./MOOD.html">MOOD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod" href="./discussion-and-results.html">Discussion and Results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod" href="./conclusion.html">Conclusion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link--mod" href="./authors.html">Authors</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mood-container">
+    <h2 class="mood-title">MOOD Background <br> Multi-objective Optimization Design</h2>
+
+    <div class="machine-learning">
+      <article class="ml-intro">
+        <h2 class="ml-title">Machine Learning</h2>
+        <p class="ml-text">Machine Learning refers to computer algoriths which can improve themselves automatically
+          through experience in the form of data, acknowledging complex patterns for decision making based in the given
+          data.</p>
+      </article>
+
+      <article class="ml-learning-process">
+        <h3 class="ml-lp-title">Learning process</h3>
+        <p class="ml-text">Such learning process could be:</p>
+        <div class="supervised-learning">
+          <div class="supervised-learning-box">
+            <ul class="ml-lp-table">
+              <li class="ml-lp-item">
+                <article class="unsupervised table-item">
+                  <h4 class="table-title">Unsupervised</h4>
+                  <p class="table-text">Inputs required</p>
+                </article>
+              </li>
+              <li class="ml-lp-item">
+                <article class="reinforcement table-item">
+                  <h4 class="table-title">By Reinforcement</h4>
+                  <p class="table-text">Via interaction with the surroundings</p>
+                </article>
+              </li>
+            </ul>
+            <article class="sp-text">
+              <article class="supervised">
+                <h4 class="table-title">Supervised</h4>
+                <p class="table-text">Requiring inputs and targets. The dataset is divided in: training and test data
+                  (see
+                  Fig. 1).</p>
+              </article>
+              <p class="ml-text">The main goal is to construct a relationship to provide an output (target prediction)
+                for any
+                new M instance (with its N features). Such training could be oriented for classification or regression.
+                In
+                both cases, several representations for learners existis, the chosen for this works is the logistic
+                regression.</p>
+            </article>
+          </div>
+          <figure class="figure figure--mod sp-figure">
+            <img src="./assets/img/supervised-learning.png" class="figure-img img-fluid rounded image--mod"
+              alt="Supervised Learning Process">
+            <figcaption class="figure-caption caption--mod">Fig.1: Supervised Learning</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+
+    <div class="logistic-regression">
+      <h2 class="ml-title">Logistic Regression</h2>
+      <p class="ml-text">Logistic regression is the simplest statistical model to predict a categorical value. In the
+        machine learning domain, it could be considered the simplest classifier.</p>
+      <p class="ml-text">It is defined by a sigmoid function (Fig 2), which computes the probability of a given
+        observation to be 1.</p>
+      <div class="sigmoid-function">
+        <figure class="figure sigmoid-function-image figure--mod">
+          <img src="./assets/img/sigmoid-function.png" class="figure-img img-fluid rounded image--mod"
+            alt="Sigmoid Function">
+          <figcaption class="figure-caption caption--mod">Fig. 2: Sigmoid Function</figcaption>
+        </figure>
+        <p class="sf-box sf-box--1">0 = normal event</p>
+        <p class="sf-box sf-box--2">1 = anomaly event</p>
+      </div>
+      <div class="lr-functions">
+        <p class="ml-text lr-functions--text">The parameter 𝛽 is adjusted using a loss function (Fig 3) and optimized
+          using a cost function
+          (Fig. 4), it can be noticed that is an aggregation function for classifications and misclassifications.</p>
+
+        <figure class="figure loss-function-image figure--mod">
+          <img src="./assets/img/loss-function.png" class="figure-img img-fluid rounded image--mod" alt="Loss Function">
+          <figcaption class="figure-caption caption--mod">Fig. 3: Loss Function</figcaption>
+        </figure>
+        <figure class="figure cost-function-image figure--mod">
+          <img src="./assets/img/cost-function.png" class="figure-img img-fluid rounded image--mod" alt="Cost Function">
+          <figcaption class="figure-caption caption--mod">Fig. 4: Cost Function</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="multi-objective-optimization">
+      <h2 class="ml-title">Multi-objective Optimization</h2>
+      <p class="ml-text">The multi-objective optimization method is an attractive feature when the problem presents
+        multiple conflicting objectives, configuring a MOP (multi-objective problem). This tool handles the objectives
+        simultaneously, generating a set of Pareto optimal solutions, each defining an objective vector in the Pareto
+        front.</p>
+      <p class="ml-text">Normally, FP and FN are conflicting objectives in the analysis, and the trade-offs between them
+        should be minimized. Instead of using an aggregation function to optimize the logistic regression for correct
+        and incorrect classifications for FN and FP, this performance was evaluated through multi-objective optimization
+        (See Fig. 5).</p>
+      <div class="mo-info">
+        <figure class="figure mop-equation figure--mod">
+          <img src="./assets/img/mop-equation.png" alt="MOP definition equation"
+            class="figure-img img-fluid rounded image--mod">
+          <figcaption class="figure-caption caption--mod">Fig. 5 - MOP definition for FP and FN</figcaption>
+        </figure>
+        <article class="extra-mop">
+          <p class="extra-text ml-text">Optimisation algorithm: spMODEx. Default values for hyper-parameters are used, and 3e4
+            function evaluations are used to approximate the Pareto front.</p>
+          <p class="extra-text ml-text">Visualisation tool: 2D plots, parallel coordinates and boxplots.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="study-design">
+      <h2 class="ml-title">Study Design</h2>
+      <div class="study-design-content">
+        <div class="dataset-figure">
+          <p class="ml-text">This works use real-word data, from the major german water supplier, generated in a research
+            project on drinking water.</p>
+          <img src="./assets/img/logo.png" alt="German Company Logo" class="company-image">
+          <img src="./assets/img/dataset.png" alt="Dataset representation" class="dataset-image">
+        </div>
+        <div class="parameter">
+          <p class="ml-text">The data is analyzed by the following features:</p>
+          <table class="table table-striped table--mod">
+            <thead>
+              <tr class="table--titles">
+                <th scope="col">Parameter</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Time</th>
+                <td class="italic--table-mod">datetime</td>
+                <td>Time Stamp</td>
+              </tr>
+              <tr>
+                <th scope="row">WT</th>
+                <td class="italic--table-mod">°C</td>
+                <td>Water Temperature</td>
+              </tr>
+              <tr>
+                <th scope="row">ClO2(1), ClO2(2)</th>
+                <td class="italic--table-mod">mg/l</td>
+                <td>Chlorine Dioxide (2 values)</td>
+              </tr>
+              <tr>
+                <th scope="row">pH</th>
+                <td class="italic--table-mod">pH</td>
+                <td>pH Value</td>
+              </tr>
+              <tr>
+                <th scope="row">Redox</th>
+                <td class="italic--table-mod">mV</td>
+                <td>Redox Potential</td>
+              </tr>
+              <tr>
+                <th scope="row">EC</th>
+                <td class="italic--table-mod">μS/cm</td>
+                <td>Conductivity</td>
+              </tr>
+              <tr>
+                <th scope="row">TURB</th>
+                <td class="italic--table-mod">NTU</td>
+                <td>Turbidity</td>
+              </tr>
+              <tr>
+                <th scope="row">FR(1), FR(2)</th>
+                <td class="italic--table-mod">m³/h</td>
+                <td>Water Flow Rate (2 values)</td>
+              </tr>
+              <tr>
+                <th scope="row">EVENT</th>
+                <td class="italic--table-mod">binary</td>
+                <td>Anomaly Event</td>
+              </tr>
+            </tbody>
+          </table>
+          <article class="extra-info">
+            <ul class="extra-list">
+              <li class="extra-item ml-text">Pre-processing: instances with missing or not interpretable values has been excluded.
+                No detrending has been performed.</li>
+              <li class="extra-item ml-text">Feature engineering: No additional features are included. This means that this problem
+                is being treated as a static problem instead of a dynamic time series.</li>
+              <li class="extra-item ml-text">Processing: Input data has been normalised within the interval [01].</li>
+              <li class="extra-item ml-text">Data split: 13900 instances for training and 566 instances for validation.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <img src="./assets/img/logo-pucpr-branca.png" alt="#" class="footer-image">
+
+    <article class="footer-article">
+      <p class="footer-article--text">Projeto PIBIC Jr</p>
+      <p class="footer-article--text">Bolsa CNPq / PUCPR</p>
+      <p class="footer-article--text">Scientific Communication of Multi-obejctive {Linear, Logistic} Regression II</p>
+    </article>
+
+    <img src="./assets/img/CNPq_v2017_rgb.png" alt="#" class="footer-image">
+  </footer>
+
+  <!-- Bootstrap JS import -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
